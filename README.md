@@ -19,6 +19,7 @@ About the Database:
 <img width="985" height="464" alt="DB Info" src="https://github.com/user-attachments/assets/b2e0b034-aa72-4f57-b3a8-1402efee5fa8" />
 
 Tasks:
+
 1- Find out which employees are burnt out
 
 2- Using the data you have, create a parameter and find out which employees are at the risk of being burnt out
@@ -34,7 +35,9 @@ Tasks:
 7- What are the main causes of the stress? How can we fix them?
 
 Part 1: Altering the Data
+
 1.1) Creating the BurnoutRisk column
+
 To see which employees are close to being burnt out, we must adjust our data and use a formula to filter them out.
 
 Our conditions are:
@@ -53,6 +56,7 @@ Function written to generate BurnoutRisk column
 =IF(AND(H2<3;I2>5;J2=0);1;0)
 
 1.2) Creating the RemoteRole column
+
 The RemoteRatio column shows how many hours does an employee work remotely. When calculated with WorkHoursPerWeek, we can find out how many hours did an employee work.
 
 To use this column more effectively in our analysis, I decided to create a column called RemoteRole using these parameters:
@@ -77,6 +81,7 @@ G4 >= 75; "Remote" )
 2) Visualizing our Data
 
 2.1) General Informations about our Employees
+
 <img width="1183" height="229" alt="General Stats" src="https://github.com/user-attachments/assets/a4104a50-f518-4633-9bb5-6667b4237d0d" />
 
 Our burnout rate is 6.45, which makes up 129 out of 2000 employees
@@ -88,6 +93,7 @@ Average satisfaction also dances around the median score
 Average weekly work hours are around 49 hours, which makes up around 9-10 hours per day
 
 2.2) Burnout Information of our Departments
+
 <img width="1444" height="597" alt="Department Info" src="https://github.com/user-attachments/assets/0fd6227d-d2f0-4406-a58b-e587960ae804" />
 Sales department has the highest burnout and highest risk rate. It is followed by HR and Manager roles.
 Compared to those three departments, Analysts and Engineers seem to be having less burnout and under lower risk.
