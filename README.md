@@ -62,9 +62,13 @@ The RemoteRatio column shows how many hours does an employee work remotely. When
 To use this column more effectively in our analysis, I decided to create a column called RemoteRole using these parameters:
 
 Ratio between 0-9: Office Worker
+
 Between 10-24: Mostly in Office	
+
 Between 25-49: Hybrid
+
 Between 50-74: Mostly Remote	
+
 More than 75: Remote
 
 Adding the RemoteRole Column
