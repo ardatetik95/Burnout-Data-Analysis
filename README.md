@@ -20,11 +20,17 @@ About the Database:
 
 Tasks:
 1- Find out which employees are burnt out
+
 2- Using the data you have, create a parameter and find out which employees are at the risk of being burnt out
+
 3- Delve into working departments. Is there a department where burnout rates are different than others?
+
 4- Does age, gender and experience have a role in stress?
+
 5- Does office-remote work ratio have a role in stress?
+
 6- Are there any correlations worth considering?
+
 7- What are the main causes of the stress? How can we fix them?
 
 Part 1: Altering the Data
@@ -43,12 +49,14 @@ Adding the BurnoutRisk column
 <img width="893" height="848" alt="image" src="https://github.com/user-attachments/assets/ee26114b-738b-4e5d-8ee2-145a7402b013" />
 
 Function written to generate BurnoutRisk column
+
 =IF(AND(H2<3;I2>5;J2=0);1;0)
 
 1.2) Creating the RemoteRole column
 The RemoteRatio column shows how many hours does an employee work remotely. When calculated with WorkHoursPerWeek, we can find out how many hours did an employee work.
 
 To use this column more effectively in our analysis, I decided to create a column called RemoteRole using these parameters:
+
 Ratio between 0-9: Office Worker
 Between 10-24: Mostly in Office	
 Between 25-49: Hybrid
@@ -59,6 +67,7 @@ Adding the RemoteRole Column
 <img width="997" height="842" alt="image" src="https://github.com/user-attachments/assets/6b4afa26-ccee-40b7-85c7-f1fb1b95bee9" />
 
 Function written to generate RemoteRole column
+
 =IFS(AND(G4>=0; G4 <= 9); "Office Worker"; 
 AND(G4 >= 10; G4 <= 24); "Mostly in Office"; 
 AND(G4 >= 25; G4 <= 49); "Hybrid"; 
